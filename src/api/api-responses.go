@@ -2,8 +2,9 @@ package api_module
 
 import (
 	"encoding/json"
-	types_module "golang-utils/src/types"
 	"net/http"
+
+	types_module "github.com/pseudoelement/golang-utils/src/types"
 )
 
 func SuccessResponse[T any](w http.ResponseWriter, body T, status int) {

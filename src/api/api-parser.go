@@ -3,11 +3,12 @@ package api_module
 import (
 	"encoding/json"
 	"errors"
-	errors_module "golang-utils/src/errors"
-	validators_module "golang-utils/src/utils/validators"
 	"io"
 	"net/http"
 	"strings"
+
+	errors_module "github.com/pseudoelement/golang-utils/src/errors"
+	validators_module "github.com/pseudoelement/golang-utils/src/utils/validators"
 )
 
 func MapQueryParams(req *http.Request, queryParamsKeys ...string) (map[string]string, errors_module.ErrorWithStatus) {
