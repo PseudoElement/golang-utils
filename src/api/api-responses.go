@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	types_module "github.com/pseudoelement/golang-utils/src/types"
+	types_module "github.com/pseudoelement/golang_utils/src/types"
 )
 
 func SuccessResponse[T any](w http.ResponseWriter, body T, status int) {
