@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	errors_module "github.com/pseudoelement/golang_utils/src/errors"
-	validators_module "github.com/pseudoelement/golang_utils/src/utils/validators"
+	errors_module "github.com/pseudoelement/golang-utils/src/errors"
+	validators_module "github.com/pseudoelement/golang-utils/src/utils/validators"
 )
 
 func MapQueryParams(req *http.Request, queryParamsKeys ...string) (map[string]string, errors_module.ErrorWithStatus) {
