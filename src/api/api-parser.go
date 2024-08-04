@@ -56,8 +56,8 @@ func ParseReqBody[T any](w http.ResponseWriter, req *http.Request) (T, errors_mo
 		case strings.HasPrefix(err.Error(), "json: unknown field "):
 			return *body, errors_module.UnknownFieldJson(err.Error())
 
-		case errors.Is(err, io.EOF):
-			return *body, errors_module.EmptyBody()
+		// case errors.Is(err, io.EOF):
+		// 	return *body, errors_module.EmptyBody()
 
 		case err.Error() == "http: request body too large":
 			return *body, errors_module.TooLargeBody()
