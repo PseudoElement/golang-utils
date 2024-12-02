@@ -18,7 +18,7 @@ func Contains[T any](arr []T, val any) bool {
 	return false
 }
 
-func Find[T any](arr []T, cond func(T) bool) (interface{}, error) {
+func Find[T any](arr []T, cond func(T) bool) (T, error) {
 	for i := 0; i < len(arr); i++ {
 		el := arr[i]
 		if cond(el) {
